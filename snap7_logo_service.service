@@ -1,0 +1,14 @@
+[Unit]
+Description=snap7 Logo service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python -u waitress_server.py
+WorkingDirectory=/home/pi/python/snap7_logo_service
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
