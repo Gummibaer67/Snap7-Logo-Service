@@ -11,13 +11,17 @@ Is a tool to communicate with multiple Logo's via html/json.
   - Snap7 with this guide: http://simplyautomationized.blogspot.de/2014/12/raspberry-pi-getting-data-from-s7-1200.html
 - Copy all files to: `/home/pi/python/snap7_logo_service`
 - Go to snap7_logo_service: `cd /home/pi/python/snap7_logo_service`
-- Change the settings in logo_io-node.py for your logo's
+- Change the settings for your logo's in:
+  - snap7_logo_service.py
+  - logo_io-node.py
 - Test Snap7 Logo Service with: `python waitress_server.py`
 - Copy snap7_logo_service.service to /etc/systemd/system: `sudo cp snap7_logo_service.service /etc/systemd/system/snap7_logo_service.service`
 - Test snap7_logo_service.service:
   - start: `sudo systemctl start snap7_logo_service.service`
   - stop: `sudo systemctl stop snap7_logo_service.service`
 - If everything is ok, start the service with the system start: `sudo systemctl enable snap7_logo_service.service`
+
+- Optionally, a Chrome extension for REST API Testing https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm
 
 ## Snap7 Logo Service singel Node json request
 *`[POST]`* `http://0.0.0.0:5000/logo/api/v1.0/node?json=<json_request>`
