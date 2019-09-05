@@ -1,16 +1,20 @@
 #!/usr/bin/env python
 
 class IO_Node:
-    def __init__(self, _id, _logo, _readAddress, _readBit, _writeAddress, _writeBit, _rwLenght, _invertResult, _text):
-        self.n_id           = _id
-        self.n_logo         = _logo
-        self.n_readAddress  = _readAddress
-        self.n_readBit      = _readBit
-        self.n_writeAddress = _writeAddress
-        self.n_writeBit     = _writeBit
-        self.n_rwLenght     = _rwLenght
-        self.n_invertResult = _invertResult
-        self.n_text         = _text
+    def __init__(self, _id, _logo, _readAddress, _readBit, _writeOnAddress, _writeOnBit, _writeOffAddress, _writeOffBit, _writeAddress, _writeBit, _rwLenght, _invertResult, _text):
+        self.n_id              = _id
+        self.n_logo            = _logo
+        self.n_readAddress     = _readAddress
+        self.n_readBit         = _readBit
+        self.n_writeOnAddress  = _writeOnAddress
+        self.n_writeOnBit      = _writeOnBit
+        self.n_writeOffAddress = _writeOffAddress
+        self.n_writeOffBit     = _writeOffBit
+        self.n_writeAddress    = _writeAddress
+        self.n_writeBit        = _writeBit
+        self.n_rwLenght        = _rwLenght
+        self.n_invertResult    = _invertResult
+        self.n_text            = _text
 
 
 class IO_Page:
@@ -24,27 +28,31 @@ class IO_Page:
                         #      |      Logo
                         #      |      |     Read Address
                         #      |      |     |  Read Bit
-                        #      |      |     |  |    Write Address
-                        #      |      |     |  |    |  Write Bit
-class IO_Array:         #      |      |     |  |    |  |   R/W Lenght
-    def __init__(self): #      |      |     |  |    |  |   |  Invert Result
-        self.nodes = [ IO_Node(0,     0,    0, 0,   0, 0,  0, 0, "Dumy"),
+                        #      |      |     |  |    Write On Address
+                        #      |      |     |  |    |  Write On Bit
+                        #      |      |     |  |    |  |    Write Off Address
+                        #      |      |     |  |    |  |    |  Write Off Bit
+                        #      |      |     |  |    |  |    |  |    Write Address
+                        #      |      |     |  |    |  |    |  |    |  Write Bit
+class IO_Array:         #      |      |     |  |    |  |    |  |    |  |   R/W Lenght
+    def __init__(self): #      |      |     |  |    |  |    |  |    |  |   |  Invert Result
+        self.nodes = [ IO_Node(0,     0,    0, 0,   0, 0,   0, 0,   0, 0,  0, 0, "Dumy"),
 
-                       IO_Node(1,     0, 1064, 0,   1, 0,  1, 0, "Example 1"),
-                       IO_Node(2,     0, 1064, 1,   1, 1,  1, 0, "Example 2"),
-                       IO_Node(3,     0, 1064, 2,   1, 2,  1, 0, "Example 3"),
-                       IO_Node(4,     0, 1064, 3,   1, 3,  1, 0, "Example 4"),
+                       IO_Node(1,     0, 1064, 0,   0, 0,   0, 0,   1, 0,  1, 0, "Example 1"),
+                       IO_Node(2,     0, 1072, 0,   0, 0,   0, 0,   4, 0,  8, 0, "Example 2"),
+                       IO_Node(3,     0, 1074, 0,   0, 0,   0, 0,   5, 0, 16, 0, "Example 3"),
+                       IO_Node(4,     0, 1076, 0,   0, 0,   0, 0,   6, 0, 32, 0, "Example 4"),
 
-                       IO_Node(5,     1,  942, 0,   1, 4,  1, 0, "Example 5"),
-                       IO_Node(6,     1,  942, 1,   1, 5,  1, 0, "Example 6"),
-                       IO_Node(7,     1,  942, 2,   2, 3,  1, 0, "Example 7"),
-                       IO_Node(8,     1,  942, 3,   2, 4,  1, 0, "Example 8"),
+                       IO_Node(5,     1,  942, 0,   0, 0,   0, 0,   1, 4,  1, 0, "Example 5"),
+                       IO_Node(6,     1,  942, 1,   0, 0,   0, 0,   1, 5,  1, 0, "Example 6"),
+                       IO_Node(7,     1,  942, 2,   0, 0,   0, 0,   2, 3,  1, 1, "Example 7"),
+                       IO_Node(8,     1,  942, 3,   0, 0,   0, 0,   2, 4,  1, 1, "Example 8"),
 
-                       IO_Node(9,     0,   92, 0,  90, 0, 16, 0, "Example 9"),
-                       IO_Node(10,    0,   98, 0,  96, 0, 16, 0, "Example 10"),
+                       IO_Node(9,     0,   92, 0,   0, 0,   0, 0,  90, 0, 16, 0, "Example 9"),
+                       IO_Node(10,    0,   98, 0,   0, 0,   0, 0,  96, 0, 16, 0, "Example 10"),
 
-                       IO_Node(11,  255,    0, 0,   3, 0,  1, 0, "Example 11"),
-                       IO_Node(12,  255,    0, 0,   3, 1,  1, 0, "Example 12"),
+                       IO_Node(11,  255,    0, 0,   0, 0,   0, 0,   3, 0,  1, 0, "Example 11"),
+                       IO_Node(12,  255,    0, 0,   0, 0,   0, 0,   3, 1,  1, 0, "Example 12"),
                       ]
 
         self.pages = [ IO_Page(0, [0],          "Requests for html page 0"),
