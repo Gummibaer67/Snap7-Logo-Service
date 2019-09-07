@@ -34,8 +34,12 @@ cors = CORS(app, resources={r"/logo/api/*": {"origins": "*"}})
 
 def setupApp():
     for x in range(len(client)):
-        target = client[x]
-        target.connect(client_ip[x], local_tsap[x], remote_tsap[x])
+        try:
+            target = client[x]
+            target.connect(client_ip[x], local_tsap[x], remote_tsap[x])
+            print "Connect to Logo no.: " + str(x+1) + "!"
+        except:
+            print "Error, can not connect to Logo no.: " + str(x+1) + "!"
 
 
 def str2bool(v):
@@ -217,7 +221,7 @@ def apiCall_v1_0_node():
         if 'pushbutton' in data_decoded:
             node_pushButton = int(data_decoded['pushbutton'])
         if 'write' in data_decoded:
-            node_set = data_decoded['write']
+            node_write = data_decoded['write'].upper()
         if 'value' in data_decoded:
             node_value = int(data_decoded['value'])
         if 'return' in data_decoded:
@@ -226,7 +230,7 @@ def apiCall_v1_0_node():
         if node_command == "GET":
             node_return_value = getNode(node)
         if node_command == "SET":
-            node_return_value = setNode(node, node_pushButton, node_set, node_value)
+            node_return_value = setNode(node, node_pushButton, node_write, node_value)
             if node_return_command == "GET":
                 time.sleep(.200)
                 node_return_value = getNode(node)
