@@ -2,3 +2,4 @@ help.json
 install.txt
 private_config.py
 private_logo_io_node.py
+.DS_Store
