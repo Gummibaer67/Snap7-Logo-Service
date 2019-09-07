@@ -38,7 +38,7 @@ Name             | Values                   | Required | Notes
 `command`        | "GET" or "SET"           | yes      | "GET" - reads the values from the logo, "SET" - write the values in the logo.
 `id`             | (custom)                 | yes      | a number for a IO_Node
 `pushbutton`[^1] | 1 or 0                   | no       | Must be set to `0` if your Network-Input act as a switch, default is: `1`, if `rwLenght` (from IO_Node) > `1`: `pushbutton` is ignort
-`write`          | "on", "off" or "default" | no       | Must be set to "on", "off" or "ta", default is: "default" ;-)
+`write`          | "on", "off" or "default" | no       | Must be set to "on", "off", default is: "default" ;-)
 `value`          | (custom)                 | no       | a number, default is: `1`
 `return`         | "GET" or "value"         | no       | "GET" - reads the values from the logo, "value" - return `value`, default return value for "SET" is: `1`
 
