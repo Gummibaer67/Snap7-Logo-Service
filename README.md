@@ -60,7 +60,7 @@ Name             | Values   | Required | Notes
 
 ### Example IO_Node:
 
-`IO_Node(1, 1, 1064, 0, 1, 0, 1, 0, "Q1 - V1.0 - Logo 8FS4 Test")`
+`IO_Node(1, 1, 1064, 0, 1, 0, 0, 0, 0, 0, 1, 0, "Q1 - V1.0 - Logo 8FS4 Test")`
 
 ### IO_Node parameters:
 
