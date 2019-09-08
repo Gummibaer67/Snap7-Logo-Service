@@ -19,8 +19,8 @@ And a backend for:
 - Copy all files to: `/home/pi/python/snap7_logo_service`
 - Go to snap7_logo_service: `cd /home/pi/python/snap7_logo_service`
 - Change the settings for your logo's in:
-  - snap7_logo_service.py
-  - logo_io-node.py
+  - in snap7_logo_service.py: Snap7 client, IP address, local TASP and remote TASP.
+  - in logo_io-node.py: enter a few variable memory values.
 - Test Snap7 Logo Service with: `python waitress_server.py`
 - Copy snap7_logo_service.service to /etc/systemd/system: `sudo cp snap7_logo_service.service /etc/systemd/system/snap7_logo_service.service`
 - Test snap7_logo_service.service:

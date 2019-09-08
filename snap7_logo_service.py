@@ -14,17 +14,20 @@ import logo_io_node
 
 import snap7
 
-########################################################
-# client      = [snap7.logo.Logo(), snap7.logo.Logo()] #
-# client_ip   = ["10.0.0.2",        "10.0.0.3"]        #
-# local_tsap  = [0x4200,            0x4200]            #
-# remote_tsap = [0x5200,            0x5200]            #
-########################################################
-import private_config
-client      = private_config.client
-client_ip   = private_config.client_ip
-local_tsap  = private_config.local_tsap
-remote_tsap = private_config.remote_tsap
+###############################################################################
+# Uncomment the following 4 lines, and change the settings to fit your logos! #
+# client      = [snap7.logo.Logo(), snap7.logo.Logo()]                        #
+# client_ip   = ["10.0.0.2",        "10.0.0.3"]                               #
+# local_tsap  = [0x4200,            0x4200]                                   #
+# remote_tsap = [0x5200,            0x5200]                                   #
+###############################################################################
+# delete the following 5 lines:                                               #
+import private_config                                                         #
+client      = private_config.client                                           #
+client_ip   = private_config.client_ip                                        #
+local_tsap  = private_config.local_tsap                                       #
+remote_tsap = private_config.remote_tsap                                      #
+###############################################################################
 
 nodes_and_pages_array = logo_io_node.IO_Array()
 
