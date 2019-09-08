@@ -9,9 +9,10 @@ And a backend for:
 
 ## Installation
 - Install dependencies:
-  - Flask using: `pip install flask`
-  - Flask-CORS using: `pip install -U flask-cors`
-  - Waitress using: `pip install waitress`
+  - Python PIP using: `sudo apt-get install python-pip` or for Python3 using: `sudo apt-get install python3-pip`
+  - Flask using: `sudo pip install flask`
+  - Flask-CORS using: `sudo pip install -U flask-cors`
+  - Waitress using: `sudo pip install waitress`
   - Install Snap7:
     - with this guide: [Raspberry Pi getting data from a S7-1200 PLC](http://simplyautomationized.blogspot.de/2014/12/raspberry-pi-getting-data-from-s7-1200.html)
     - [Snap7](http://snap7.sourceforge.net)
