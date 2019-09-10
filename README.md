@@ -55,6 +55,10 @@ Name             | Values   | Required | Notes
 `command`        | "GET"    | yes      | "GET" - reads the values from the logo
 `id`             | (custom) | yes      | a number for a IO_Page
 
+## Version Info:
+*`[GET]`* `http://10.0.0.4:5000/version`
+*`[GET]`* `http://10.0.0.4:5000/logo/api/version`
+
 ## For example request and response json objects:
 *`[GET]`* `http://10.0.0.4:5000/logo/api/v1.0/help`
 
