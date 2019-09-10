@@ -195,12 +195,12 @@ def root():
 
 @app.route("/version")
 def version():
-    return json.dumps({'success':True, "service":snap7_logo_service_version, "api":snap7_logo_service_api }), 200, {'ContentType':'application/json'}
+    return json.dumps({'success':True, 'service':snap7_logo_service_version, 'api':snap7_logo_service_api }), 200, {'ContentType':'application/json'}
 
 
 @app.route("/logo/api/version", methods=['GET'])
 def apiCall_version():
-    return json.dumps({'success':True, "version":api":snap7_logo_service_api }), 200, {'ContentType':'application/json'}
+    return json.dumps({'success':True, 'version':snap7_logo_service_api }), 200, {'ContentType':'application/json'}
 
 
 # http://10.0.0.4:5000/logo/api/v1.0/help
