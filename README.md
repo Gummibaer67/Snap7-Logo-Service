@@ -1,6 +1,8 @@
 Snap7 Logo Service
 ==================
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/sinclair81/snap7-logo-service?color=green)
+
 Is a tool to communicate with multiple Logo's via REST API.
 
 And a backend for:
