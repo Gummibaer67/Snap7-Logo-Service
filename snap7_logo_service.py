@@ -34,6 +34,8 @@ nodes_and_pages_array = logo_io_node.IO_Array()
 app = Flask(__name__)
 cors = CORS(app, resources={r"/logo/api/*": {"origins": "*"}})
 
+snap7_logo_service_version = "0.1.6"
+snap7_logo_service_api     = "1.0"
 
 def setupApp():
     for x in range(len(client)):
@@ -189,6 +191,16 @@ def not_found(error):
 @app.route("/")
 def root():
     return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
+
+
+@app.route("/version")
+def version():
+    return json.dumps({'success':True, "service":snap7_logo_service_version, "api":snap7_logo_service_api }), 200, {'ContentType':'application/json'}
+
+
+@app.route("/logo/api/version", methods=['GET'])
+def apiCall_version():
+    return json.dumps({'success':True, "version":api":snap7_logo_service_api }), 200, {'ContentType':'application/json'}
 
 
 # http://10.0.0.4:5000/logo/api/v1.0/help
