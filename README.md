@@ -34,7 +34,7 @@ And a backend for:
 - Optionally, a Chrome extension for [REST API Testing](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm)
 
 ## Snap7 Logo Service singel Node json request
-*`[POST]`* `http://0.0.0.0:5000/logo/api/v1.0/node?json=<json_request>`
+*`[POST]`* `http://10.0.0.4:5000/logo/api/v1.0/node?json=<json_request>`
 
 Name             | Values                   | Required | Notes
 ---------------- | ------------------------ | -------- | -------------------------------------
