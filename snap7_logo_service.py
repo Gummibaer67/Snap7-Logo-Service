@@ -34,7 +34,7 @@ nodes_and_pages_array = logo_io_node.IO_Array()
 app = Flask(__name__)
 cors = CORS(app, resources={r"/logo/api/*": {"origins": "*"}})
 
-snap7_logo_service_version = "0.1.6"
+snap7_logo_service_version = "0.1.7"
 snap7_logo_service_api     = "1.0"
 
 def setupApp():
@@ -146,10 +146,10 @@ def getNode(node):
 def setNode(node, pushButton, set, value):
     wAddr = node.n_writeAddress
     wBit  = node.n_writeBit
-    if set == "on":
+    if set == "ON":
         wAddr = node.n_writeOnAddress
         wBit  = node.n_writeOnBit
-    if set == "off":
+    if set == "OFF":
         wAddr = node.n_writeOffAddress
         wBit  = node.n_writeOffBit
     if node.n_logo != 255:
