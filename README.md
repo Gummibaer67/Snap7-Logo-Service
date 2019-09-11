@@ -70,7 +70,7 @@ Name             | Values   | Required | Notes
 
 ### IO_Node parameters:
 
-`IO_Node(id, logo, readAddress, readBit, writeAddress, writeBit, rwLenght, invertResult, text)`
+`IO_Node(id, logo, readAddress, readBit, writeOnAddress, writeOnBit, writeOffAddress, writeOffBit, writeAddress, writeBit, rwLenght, invertResult, text)`
 
 Name              | Type   | Description
 ----------------- | ------ | -------------------------------------
